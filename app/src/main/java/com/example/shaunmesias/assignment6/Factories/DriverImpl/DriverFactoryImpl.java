@@ -18,10 +18,10 @@ public class DriverFactoryImpl {
         return driverFactoryImpl;
     }
 
-    public DriverFactory getDriverRole(String driver){
+    public DriverFactory getDriverRole(String driver,String name, String number){
         if("Heavy Vehicle".equalsIgnoreCase(driver))
-            return new TruckDriver();
+            return new TruckDriver(name, number);
         else
-            return new VehicleDriver();
+            return new VehicleDriver(name, number);
     }
 }

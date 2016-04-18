@@ -11,6 +11,12 @@ public class TruckDriver implements DriverFactory{
     private String name;
     private String type = "Truck Driver";
     private DriverDetails dvd;
+    private String number;
+
+    public TruckDriver(String name, String number) {
+        this.number = number;
+        this.name = name;
+    }
 
     public long getId() {
         return id;
@@ -42,6 +48,11 @@ public class TruckDriver implements DriverFactory{
     @Override
     public String getRegistrationNumber(){
         return dvd.getRegNumber();
+    }
+
+    @Override
+    public String getNumber() {
+        return number;
     }
 
     @Override

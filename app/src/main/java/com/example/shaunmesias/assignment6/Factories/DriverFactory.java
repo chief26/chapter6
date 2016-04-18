@@ -9,4 +9,5 @@ public interface DriverFactory {
     public void createDriverDetails(String regNum);
     public String getRegistrationNumber();
     public String getType();
+    public String getNumber();
 }
